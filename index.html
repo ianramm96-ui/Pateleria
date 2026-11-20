@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rico e Doce Bakery | Pastelería Artesanal & Cake Design</title>
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+    <!-- Meta tags SEO -->
+    <meta name="description"
+        content="Pastelería artesanal de autor. Tortas personalizadas, tartas gourmet, macarons y boxes de regalo elaborados con los mejores ingredientes naturales.">
+    <meta name="keywords"
+        content="pasteleria, tortas, tartas, macarons, tortas personalizadas, repostería artesanal, cake design">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        atelier: {
+                            50: '#FFF7FB',
+                            100: '#FFEDF6',
+                            200: '#FFD7EF',
+                            300: '#F7B7DC',
+                            400: '#EE88BE',
+                            500: '#D84C7B',
+                            600: '#C23866',
+                            700: '#9E244E',
+                            800: '#751A3B',
+                            900: '#22181F'
+                        },
+                        brand: {
+                            pink: '#FFD7EF',
+                            soft: '#FFF7FB',
+                            berry: '#D84C7B',
+                            dark: '#22181F'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-[#FFF7FB] text-[#22181F] flex flex-col min-h-screen">
+
+    <!-- BARRA SUPERIOR DE ANUNCIOS -->
+    <div class="bg-[#22181F] text-[#F9F2EC] text-xs py-2 px-4">
+        <div
+            class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>✨ <strong>Envío sin cargo</strong> en pedidos superiores a $30.000</span>
+                <span class="hidden md:inline">| Tortas personalizadas con 48hs de anticipación</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-medium">
+                <a href="#contacto" class="hover:text-amber-200 transition-colors">
+                    <i class="fa-solid fa-location-dot mr-1"></i> Palermo, Buenos Aires
+                </a>
+                <a href="https://wa.me/5491123456789" target="_blank"
+                    class="hover:text-emerald-300 transition-colors flex items-center gap-1">
+                    <i class="fa-brands fa-whatsapp text-emerald-400"></i> Pedidos WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVEGACIÓN PRINCIPAL (GLASSMORPHISM) -->
+    <header class="sticky top-0 z-40 glass-nav transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo de Marca -->
+                <a href="#" class="flex items-center gap-3.5 group">
+                    <div class="relative">
+                        <img src="assets/logo.jpg" alt="Rico e Doce Bakery Logo"
+                            class="w-12 h-12 rounded-full object-cover border-2 border-[#ECC0D6] shadow-md group-hover:scale-105 group-hover:rotate-6 transition-all duration-300">
+                        <span class="absolute -top-1.5 -right-1.5 text-xs animate-butterfly">🦋</span>
+                    </div>
+                    <div>
+                        <span
+                            class="font-serif-title font-bold text-2xl tracking-wide text-[#22181F] block leading-none">Rico
+                            e Doce</span>
+                        <span class="font-script text-base text-[#D84C7B] tracking-wider block">Bakery &
+                            Pastelería</span>
+                    </div>
+                </a>
+
+                <!-- Enlaces de navegación desktop -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-[#523C4A]">
+                    <a href="#inicio" class="hover:text-[#D84C7B] transition-colors">Inicio</a>
+                    <a href="#catalogo" class="hover:text-[#D84C7B] transition-colors">Catálogo</a>
+                    <a href="#personalizador" class="hover:text-[#D84C7B] transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-wand-magic-sparkles text-[#D84C7B]"></i>
+                        <span>Armá tu Torta</span>
+                    </a>
+                    <a href="#taller" class="hover:text-[#D84C7B] transition-colors">El Taller</a>
+                    <a href="#testimonios" class="hover:text-[#D84C7B] transition-colors">Opiniones</a>
+                    <a href="#faq" class="hover:text-[#D84C7B] transition-colors">Preguntas</a>
+                    <a href="#contacto" class="hover:text-[#D84C7B] transition-colors">Contacto</a>
+                </nav>
+
+                <!-- Acciones derecha -->
+                <div class="flex items-center gap-3">
+                    <!-- Botón rápido WhatsApp -->
+                    <a href="https://wa.me/5491123456789" target="_blank"
+                        class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 px-3.5 py-2 rounded-xl transition-all">
+                        <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
+                        <span>Consultas</span>
+                    </a>
+
+                    <!-- Botón Carrito -->
+                    <button
+                        class="open-cart-btn relative bg-[#FFEDF6] hover:bg-[#F2E0D4] text-[#22181F] p-3 rounded-xl transition-all border border-[#F7B7DC] flex items-center gap-2 group"
+                        title="Ver mi carrito">
+                        <i
+                            class="fa-solid fa-bag-shopping text-lg text-[#D84C7B] group-hover:scale-110 transition-transform"></i>
+                        <span class="hidden md:inline text-xs font-bold">Carrito</span>
+                        <span
+                            class="cart-count-badge hidden absolute -top-1.5 -right-1.5 bg-[#D84C7B] text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md transition-transform">
+                            0
+                        </span>
+                    </button>
+
+                    <!-- Toggle móvil -->
+                    <button id="mobile-nav-toggle"
+                        class="lg:hidden p-2.5 rounded-xl text-[#22181F] hover:bg-[#FFEDF6] transition-colors">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-nav-menu"
+            class="hidden lg:hidden bg-white border-t border-[#F3CDE0] px-4 pt-3 pb-6 space-y-3 shadow-xl">
+            <a href="#inicio"
+                class="mobile-nav-link block py-2 text-sm font-medium text-[#22181F] hover:text-[#D84C7B]">Inicio</a>
+            <a href="#catalogo"
+                class="mobile-nav-link block py-2 text-sm font-medium text-[#22181F] hover:text-[#D84C7B]">Catálogo</a>
+            <a href="#personalizador"
+                class="mobile-nav-link block py-2 text-sm font-semibold text-[#D84C7B] flex items-center gap-2">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Armá tu Torta a Medida
+            </a>
+            <a href="#taller"
+                class="mobile-nav-link block py-2 text-sm font-medium text-[#22181F] hover:text-[#D84C7B]">El Taller</a>
+            <a href="#testimonios"
+                class="mobile-nav-link block py-2 text-sm font-medium text-[#22181F] hover:text-[#D84C7B]">Opiniones</a>
+            <a href="#faq"
+                class="mobile-nav-link block py-2 text-sm font-medium text-[#22181F] hover:text-[#D84C7B]">Preguntas</a>
+            <a href="#contacto"
+                class="mobile-nav-link block py-2 text-sm font-medium text-[#22181F] hover:text-[#D84C7B]">Contacto</a>
+            <div class="pt-2 border-t border-gray-100 flex gap-2">
+                <button
+                    class="open-cart-btn w-full bg-[#D84C7B] text-white py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-bag-shopping"></i> Ver mi Carrito (<span class="cart-count-badge">0</span>)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO -->
+    <section id="inicio"
+        class="relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-[#FFF7FB] via-[#FFEDF6] to-[#FFF7FB]">
+        <!-- Círculos decorativos de fondo -->
+        <div class="absolute -top-20 -left-20 w-96 h-96 bg-[#FFD7EF]/40 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -right-20 w-96 h-96 bg-[#FFD7EF]/50 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Columna Izquierda: Mensaje y CTA -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+
+                    <div
+                        class="inline-flex items-center gap-2 bg-[#FFEDF6] border border-[#ECC0D6] px-4 py-1.5 rounded-full">
+                        <span class="w-2 h-2 rounded-full bg-[#D84C7B]"></span>
+                        <span class="text-xs font-semibold text-[#B92E5E] tracking-wide uppercase">Pastelería Francesa &
+                            Argentina</span>
+                    </div>
+
+                    <h1
+                        class="font-serif-title text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#22181F] leading-[1.15]">
+                        El arte de hornear <br>
+                        <span class="italic text-[#D84C7B] font-normal">momentos dulces</span> <br>
+                        e inolvidables.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-[#6E5664] max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Horneamos diariamente con manteca de campo, chocolate belga puro y frutas frescas seleccionadas.
+                        Diseños únicos hechos a mano para tus momentos más especiales.
+                    </p>
+
+                    <!-- Botones de Acción -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#catalogo"
+                            class="w-full sm:w-auto bg-[#D84C7B] hover:bg-[#B92E5E] active:scale-95 text-white font-semibold text-sm px-8 py-4 rounded-2xl shadow-xl shadow-[#D84C7B]/25 transition-all flex items-center justify-center gap-3 group">
+                            <span>Explorar Catálogo</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+
+                        <a href="#personalizador"
+                            class="w-full sm:w-auto bg-white hover:bg-[#FFEDF6] text-[#22181F] border border-[#ECC0D6] font-semibold text-sm px-7 py-4 rounded-2xl transition-all shadow-sm flex items-center justify-center gap-2 group">
+                            <i class="fa-solid fa-wand-magic-sparkles text-[#D84C7B]"></i>
+                            <span>Armar Torta a Medida</span>
+                        </a>
+                    </div>
+
+                    <!-- Estadísticas / Confianza -->
+                    <div
+                        class="grid grid-cols-3 gap-4 pt-8 border-t border-[#F3CDE0] max-w-lg mx-auto lg:mx-0 text-left">
+                        <div>
+                            <div class="font-serif-title font-bold text-2xl text-[#22181F]">+12.000</div>
+                            <div class="text-xs text-[#825E73]">Festejos endulzados</div>
+                        </div>
+                        <div>
+                            <div class="font-serif-title font-bold text-2xl text-[#22181F]">100%</div>
+                            <div class="text-xs text-[#825E73]">Materia prima noble</div>
+                        </div>
+                        <div>
+                            <div class="font-serif-title font-bold text-2xl text-[#22181F] flex items-center gap-1">
+                                4.9 <i class="fa-solid fa-star text-amber-500 text-sm"></i>
+                            </div>
+                            <div class="text-xs text-[#825E73]">Google Reviews</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Columna Derecha: Tarjeta Hero & Torta Estrella -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md">
+
+                        <!-- Imagen Principal -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white hero-glow">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"
+                                alt="Torta Estrella Rico e Doce" class="w-full aspect-[4/5] object-cover" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                            </div>
+
+                            <!-- Información dentro de la foto -->
+                            <div class="absolute bottom-6 left-6 right-6 text-white">
+                                <span
+                                    class="bg-[#D84C7B] text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2 inline-block">
+                                    Favorito de la Semana
+                                </span>
+                                <h3 class="font-serif-title text-2xl font-bold leading-tight">Marquise Belga Imperial
+                                </h3>
+                                <p class="text-xs text-rose-100 mt-1 line-clamp-2">Dulce de leche colonial, frutos rojos
+                                    de la Patagonia y merengue suizo dorado.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="font-serif-title text-xl font-bold">$ 26.000</span>
+                                    <button onclick="addToCart('torta-02')"
+                                        class="bg-white text-[#22181F] hover:bg-rose-50 text-xs font-semibold px-4 py-2 rounded-xl transition-all shadow-md flex items-center gap-1.5">
+                                        <i class="fa-solid fa-cart-plus text-[#D84C7B]"></i> Pedir Ahora
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Flotante Decorativa 1 -->
+                        <div
+                            class="hidden sm:flex absolute -top-6 -right-6 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-[#F5D6E5] items-center gap-3 animate-float">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 text-lg">
+                                🎂
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-[#22181F] block">100% Personalizable</span>
+                                <span class="text-[11px] text-[#825E73]">A tu gusto y temática</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Flotante Decorativa 2 -->
+                        <div
+                            class="hidden sm:flex absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-[#F5D6E5] items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-lg">
+                                🚚
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-[#22181F] block">Envíos Cuidados</span>
+                                <span class="text-[11px] text-[#825E73]">Llega intacta a tu fiesta</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PILARES DE CALIDAD -->
+    <section class="py-12 bg-white border-y border-[#F3CDE0]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-[#FFEDF6] text-[#D84C7B] flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-[#22181F]">100% Manteca Pura</h4>
+                        <p class="text-xs text-[#6E5664] mt-1">Cero margarinas ni grasas hidrogenadas. Texturas suaves y
+                            sabor genuino.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-[#FFEDF6] text-[#D84C7B] flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-[#22181F]">Chocolate Belga Real</h4>
+                        <p class="text-xs text-[#6E5664] mt-1">Trabajamos exclusivamente con cacao puro de origen de 60%
+                            y 70%.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-[#FFEDF6] text-[#D84C7B] flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-[#22181F]">Horneado en el Día</h4>
+                        <p class="text-xs text-[#6E5664] mt-1">Cada pedido se hornea y arma horas antes de la entrega
+                            para máxima frescura.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-[#FFEDF6] text-[#D84C7B] flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-[#22181F]">Packaging de Lujo</h4>
+                        <p class="text-xs text-[#6E5664] mt-1">Cajas rígidas diseñadas con lazos de seda, listas para
+                            sorprender y regalar.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CATÁLOGO DE PRODUCTOS -->
+    <section id="catalogo" class="py-20 bg-[#FFF7FB]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Título de Sección -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="font-script text-2xl text-[#D84C7B] block">Nuestras Creaciones</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-[#22181F] mt-1">
+                    Catálogo de Tentaciones
+                </h2>
+                <p class="text-sm text-[#6E5664] mt-3">
+                    Explora nuestra selección de tortas de autor, tartas clásicas, macarons franceses y boxes de
+                    desayuno para regalar.
+                </p>
+            </div>
+
+            <!-- Filtros de Categorías & Barra de Búsqueda -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
+
+                <!-- Botones de Categorías -->
+                <div class="flex flex-wrap items-center justify-center gap-2">
+                    <button data-category="all"
+                        class="category-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-[#D84C7B] text-white shadow-md transition-all">
+                        Todos
+                    </button>
+                    <button data-category="tortas"
+                        class="category-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-white text-[#6E5664] border border-[#ECC0D6] hover:border-[#D84C7B] transition-all">
+                        Tortas de Autor
+                    </button>
+                    <button data-category="tartas"
+                        class="category-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-white text-[#6E5664] border border-[#ECC0D6] hover:border-[#D84C7B] transition-all">
+                        Tartas & Pies
+                    </button>
+                    <button data-category="dulces"
+                        class="category-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-white text-[#6E5664] border border-[#ECC0D6] hover:border-[#D84C7B] transition-all">
+                        Petit Fours & Macarons
+                    </button>
+                    <button data-category="boxes"
+                        class="category-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-white text-[#6E5664] border border-[#ECC0D6] hover:border-[#D84C7B] transition-all">
+                        Boxes de Regalo
+                    </button>
+                    <button data-category="especial"
+                        class="category-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-white text-[#6E5664] border border-[#ECC0D6] hover:border-[#D84C7B] transition-all">
+                        🌱 Sin TACC & Vegano
+                    </button>
+                </div>
+
+                <!-- Buscador en tiempo real -->
+                <div class="relative w-full md:w-72">
+                    <i
+                        class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+                    <input type="text" id="search-products" placeholder="Buscar por nombre, sabor..."
+                        class="w-full bg-white border border-[#ECC0D6] rounded-xl pl-9 pr-9 py-2 text-xs text-[#22181F] placeholder-gray-400 focus:outline-none focus:border-[#D84C7B] shadow-sm transition-all" />
+                    <button id="search-clear"
+                        class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 text-xs">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Grid de Productos -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Se inyecta dinámicamente con JavaScript -->
+            </div>
+
+            <!-- Estado Vacío cuando no hay resultados de búsqueda -->
+            <div id="products-empty"
+                class="hidden text-center py-16 bg-white rounded-2xl border border-dashed border-[#ECC0D6] p-8 max-w-md mx-auto">
+                <div
+                    class="w-16 h-16 rounded-full bg-[#FFEDF6] text-[#D84C7B] flex items-center justify-center text-2xl mx-auto mb-4">
+                    <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                <h3 class="font-serif-title font-bold text-lg text-[#22181F]">No encontramos esa dulzura</h3>
+                <p class="text-xs text-[#6E5664] mt-2 mb-4">Intenta buscar con otra palabra clave o revisa nuestras
+                    categorías principales.</p>
+                <button onclick="document.querySelector('[data-category=all]').click()"
+                    class="bg-[#D84C7B] text-white text-xs font-semibold px-4 py-2 rounded-xl">
+                    Ver todos los productos
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN INTERACTIVA: PERSONALIZADOR DE TORTAS A MEDIDA -->
+    <section id="personalizador" class="py-20 bg-gradient-to-b from-[#FFEDF6] to-[#FFF7FB] border-t border-[#F3CDE0]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span
+                    class="inline-flex items-center gap-1.5 bg-[#FFEDF6] border border-[#ECC0D6] px-3.5 py-1 rounded-full text-xs font-semibold text-[#B92E5E] mb-3">
+                    <i class="fa-solid fa-sparkles text-amber-500"></i> Tu Torta, Tus Reglas
+                </span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-[#22181F]">
+                    Diseñá tu Torta Soñada
+                </h2>
+                <p class="text-sm text-[#6E5664] mt-3">
+                    Elige el tamaño, sabor de bizcochuelo, rellenos gourmet y estilo de decoración. Calculamos el valor
+                    en vivo y puedes sumarla directo al pedido.
+                </p>
+            </div>
+
+            <!-- Contenedor del Builder: 2 Columnas -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                <!-- Columna Izquierda: Pasos de Configuración -->
+                <div class="lg:col-span-8 space-y-8">
+
+                    <!-- PASO 1: Tamaño & Porciones -->
+                    <div class="bg-white p-6 rounded-2xl border border-[#F3CDE0] shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span
+                                class="w-7 h-7 rounded-full bg-[#D84C7B] text-white text-xs font-bold flex items-center justify-center">1</span>
+                            <div>
+                                <h3 class="font-bold text-sm text-[#22181F]">Tamaño & Cantidad de Porciones</h3>
+                                <p class="text-xs text-[#825E73]">Calculado en base a porciones generosas de fiesta</p>
+                            </div>
+                        </div>
+                        <div id="builder-sizes-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- Se renderiza desde JS -->
+                        </div>
+                    </div>
+
+                    <!-- PASO 2: Bizcochuelo -->
+                    <div class="bg-white p-6 rounded-2xl border border-[#F3CDE0] shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span
+                                class="w-7 h-7 rounded-full bg-[#D84C7B] text-white text-xs font-bold flex items-center justify-center">2</span>
+                            <div>
+                                <h3 class="font-bold text-sm text-[#22181F]">Sabor del Bizcochuelo</h3>
+                                <p class="text-xs text-[#825E73]">Masa súper esponjosa y perfumada</p>
+                            </div>
+                        </div>
+                        <div id="builder-sponges-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- Se renderiza desde JS -->
+                        </div>
+                    </div>
+
+                    <!-- PASO 3: Relleno Gourmet -->
+                    <div class="bg-white p-6 rounded-2xl border border-[#F3CDE0] shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span
+                                class="w-7 h-7 rounded-full bg-[#D84C7B] text-white text-xs font-bold flex items-center justify-center">3</span>
+                            <div>
+                                <h3 class="font-bold text-sm text-[#22181F]">Relleno Principal</h3>
+                                <p class="text-xs text-[#825E73]">Capas abundantes de puro sabor artesanal</p>
+                            </div>
+                        </div>
+                        <div id="builder-fillings-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- Se renderiza desde JS -->
+                        </div>
+                    </div>
+
+                    <!-- PASO 4: Extras Crocantes (Opcional) -->
+                    <div class="bg-white p-6 rounded-2xl border border-[#F3CDE0] shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span
+                                class="w-7 h-7 rounded-full bg-[#D84C7B] text-white text-xs font-bold flex items-center justify-center">4</span>
+                            <div>
+                                <h3 class="font-bold text-sm text-[#22181F]">Agregados Crocantes / Frutales (Opcional)
+                                </h3>
+                                <p class="text-xs text-[#825E73]">Podés seleccionar varios para dar textura</p>
+                            </div>
+                        </div>
+                        <div id="builder-extras-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- Se renderiza desde JS -->
+                        </div>
+                    </div>
+
+                    <!-- PASO 5: Estilo de Cobertura -->
+                    <div class="bg-white p-6 rounded-2xl border border-[#F3CDE0] shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span
+                                class="w-7 h-7 rounded-full bg-[#D84C7B] text-white text-xs font-bold flex items-center justify-center">5</span>
+                            <div>
+                                <h3 class="font-bold text-sm text-[#22181F]">Estilo & Cobertura Exterior</h3>
+                                <p class="text-xs text-[#825E73]">El toque visual que hace la diferencia</p>
+                            </div>
+                        </div>
+                        <div id="builder-styles-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- Se renderiza desde JS -->
+                        </div>
+                    </div>
+
+                    <!-- PASO 6: Dedicatoria y Observaciones -->
+                    <div class="bg-white p-6 rounded-2xl border border-[#F3CDE0] shadow-sm space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="w-7 h-7 rounded-full bg-[#D84C7B] text-white text-xs font-bold flex items-center justify-center">6</span>
+                            <div>
+                                <h3 class="font-bold text-sm text-[#22181F]">Dedicatoria & Detalles Especiales</h3>
+                                <p class="text-xs text-[#825E73]">Sin costo adicional</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-[#22181F] mb-1">
+                                Placa de chocolate con mensaje (Ej: "Feliz Cumple Sofi!"):
+                            </label>
+                            <input type="text" id="cake-dedication-text" maxlength="35"
+                                placeholder="Escribe el mensaje para la placa..."
+                                class="w-full bg-[#FFF0F6] border border-[#ECC0D6] rounded-xl px-3.5 py-2.5 text-xs text-[#22181F] focus:outline-none focus:border-[#D84C7B]" />
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-[#22181F] mb-1">
+                                Notas especiales o temáticas (colores preferidos, etc.):
+                            </label>
+                            <textarea id="cake-special-notes" rows="2"
+                                placeholder="Ej: Paleta de tonos pasteles rosas y dorados, velita número 30..."
+                                class="w-full bg-[#FFF0F6] border border-[#ECC0D6] rounded-xl px-3.5 py-2 text-xs text-[#22181F] focus:outline-none focus:border-[#D84C7B]"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Columna Derecha: Resumen de Cotización en Vivo -->
+                <div class="lg:col-span-4 sticky top-28 space-y-6">
+                    <div
+                        class="bg-white rounded-3xl p-6 border-2 border-[#D84C7B]/30 shadow-xl relative overflow-hidden">
+
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#FFD7EF]/50 rounded-full blur-2xl"></div>
+
+                        <div class="flex items-center justify-between pb-4 border-b border-[#F3CDE0]">
+                            <h3 class="font-serif-title font-bold text-lg text-[#22181F]">Resumen de tu Torta</h3>
+                            <span
+                                class="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-0.5 rounded-full">
+                                En Vivo
+                            </span>
+                        </div>
+
+                        <!-- Detalle seleccionado -->
+                        <div class="space-y-3 py-4 text-xs">
+                            <div class="flex justify-between items-start">
+                                <span class="text-[#825E73]">Tamaño:</span>
+                                <span id="summary-size-val" class="font-semibold text-right text-[#22181F]">-</span>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <span class="text-[#825E73]">Bizcochuelo:</span>
+                                <span id="summary-sponge-val" class="font-semibold text-right text-[#22181F]">-</span>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <span class="text-[#825E73]">Relleno:</span>
+                                <span id="summary-filling-val" class="font-semibold text-right text-[#22181F]">-</span>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <span class="text-[#825E73]">Extras:</span>
+                                <span id="summary-extras-val" class="font-semibold text-right text-[#22181F]">-</span>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <span class="text-[#825E73]">Estilo:</span>
+                                <span id="summary-style-val" class="font-semibold text-right text-[#22181F]">-</span>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <span class="text-[#825E73]">Dedicatoria:</span>
+                                <span id="summary-dedication-val"
+                                    class="font-semibold text-right text-[#D84C7B] italic">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Precio Total Estimado -->
+                        <div class="pt-4 border-t border-[#F3CDE0] mb-6">
+                            <span class="text-xs text-[#825E73] uppercase tracking-wider block">Total Estimado</span>
+                            <div id="custom-cake-total-price"
+                                class="font-serif-title text-3xl font-extrabold text-[#D84C7B]">
+                                $ 0
+                            </div>
+                            <p class="text-[11px] text-[#A68C9B] mt-1">Incluye packaging reforzado de regalo y velita de
+                                cortesía.</p>
+                        </div>
+
+                        <!-- Botón Añadir al Carrito -->
+                        <button id="add-custom-cake-to-cart"
+                            class="w-full bg-[#D84C7B] hover:bg-[#B92E5E] active:scale-95 text-white font-semibold text-sm py-3.5 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 group">
+                            <i class="fa-solid fa-cart-plus group-hover:scale-110 transition-transform"></i>
+                            <span>Agregar Torta al Carrito</span>
+                        </button>
+
+                    </div>
+
+                    <!-- Tip de anticipación -->
+                    <div
+                        class="bg-amber-50/80 border border-amber-200 rounded-2xl p-4 flex items-start gap-3 text-xs text-amber-900">
+                        <i class="fa-solid fa-circle-info text-amber-600 mt-0.5 text-base"></i>
+                        <p>
+                            <strong>Tiempo de elaboración:</strong> Todas nuestras tortas a medida se elaboran con 48 a
+                            72hs de anticipación para asegurar el reposo y textura perfecta.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN EL TALLER / HISTORIA -->
+    <section id="taller" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Galería de Fotos del Taller -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80"
+                            alt="Pastelera amasando" class="rounded-2xl object-cover w-full h-56 shadow-md" />
+                        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80"
+                            alt="Decoración de torta con manga"
+                            class="rounded-2xl object-cover w-full h-72 shadow-md" />
+                    </div>
+                    <div class="space-y-4 pt-6">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
+                            alt="Croissants recién horneados" class="rounded-2xl object-cover w-full h-72 shadow-md" />
+                        <img src="https://images.unsplash.com/photo-1569864321390-dc446522c002?auto=format&fit=crop&w=600&q=80"
+                            alt="Macarons de colores" class="rounded-2xl object-cover w-full h-56 shadow-md" />
+                    </div>
+                </div>
+
+                <!-- Texto de la Historia -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="font-script text-2xl text-[#D84C7B] block">Nuestra Pasión</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-[#22181F]">
+                        Pasión por la repostería honesta, sin atajos.
+                    </h2>
+
+                    <p class="text-sm text-[#6E5664] leading-relaxed">
+                        En <strong>Rico e Doce Bakery</strong> creemos que la verdadera pastelería se siente en el alma.
+                        Nació en una pequeña cocina familiar con la premisa de devolverle a cada torta el sabor
+                        auténtico: masas húmedas, merengues batidos a punto nieve y rellenos cocinados a fuego lento.
+                    </p>
+
+                    <p class="text-sm text-[#6E5664] leading-relaxed">
+                        Rechazamos las mezclas prefabricadas y los conservantes industriales. Cada ingrediente que entra
+                        a nuestro taller pasa por un riguroso control: vainas de vainilla de Madagascar, dulce de leche
+                        tradicional de tambo y frutas frescas compradas cada mañana en el mercado central.
+                    </p>
+
+                    <div class="pt-4 flex items-center gap-6">
+                        <div class="border-l-2 border-[#D84C7B] pl-4">
+                            <span class="font-script text-2xl text-[#22181F] block">Valentina Moreau</span>
+                            <span class="text-xs text-[#825E73] uppercase tracking-wider font-semibold">Chef Pastelera &
+                                Fundadora</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS DE CLIENTES -->
+    <section id="testimonios" class="py-20 bg-[#FFEDF6]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="font-script text-2xl text-[#D84C7B] block">Clientes Felices</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-[#22181F]">
+                    Lo que dicen de nosotros
+                </h2>
+                <p class="text-sm text-[#6E5664] mt-2">Más de 12.000 celebraciones endulzadas con sonrisas y aplausos.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Testimonio 1 -->
+                <div class="bg-white p-7 rounded-3xl shadow-sm border border-[#F3CDE0] flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-[#523C4A] italic leading-relaxed mb-6">
+                            "Encargué la Red Velvet para el cumpleaños número 30 de mi hermana y fue la gran estrella de
+                            la noche. Todos los invitados me preguntaron de dónde era. El frosting de mascarpone es de
+                            otro planeta."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-[#FFEDF6]">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
+                            alt="Camila R." class="w-10 h-10 rounded-full object-cover" />
+                        <div>
+                            <h4 class="font-bold text-xs text-[#22181F]">Camila Rodríguez</h4>
+                            <span class="text-[11px] text-[#9C7F90]">Torta de Cumpleaños</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-white p-7 rounded-3xl shadow-sm border border-[#F3CDE0] flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-[#523C4A] italic leading-relaxed mb-6">
+                            "Armé una torta a medida con su personalizador online y el proceso fue súper intuitivo.
+                            Llegó por delivery exactamente en el horario pactado y en una caja rígida hermosísima.
+                            ¡Súper recomendados!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-[#FFEDF6]">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                            alt="Esteban M." class="w-10 h-10 rounded-full object-cover" />
+                        <div>
+                            <h4 class="font-bold text-xs text-[#22181F]">Esteban Morales</h4>
+                            <span class="text-[11px] text-[#9C7F90]">Torta Personalizada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-white p-7 rounded-3xl shadow-sm border border-[#F3CDE0] flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-[#523C4A] italic leading-relaxed mb-6">
+                            "Compré el Box Brunch para el Día de la Madre y mi mamá se emocionó hasta las lágrimas. Los
+                            macarons de pistacho y los croissants tenían sabor a París real. Una delicadeza absoluta."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-[#FFEDF6]">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                            alt="Lucía F." class="w-10 h-10 rounded-full object-cover" />
+                        <div>
+                            <h4 class="font-bold text-xs text-[#22181F]">Lucía Fernández</h4>
+                            <span class="text-[11px] text-[#9C7F90]">Box Brunch Desayuno</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-12">
+                <span class="font-script text-2xl text-[#D84C7B] block">Resolvé tus dudas</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-[#22181F]">
+                    Preguntas Frecuentes
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+
+                <div class="faq-item border border-[#F3CDE0] rounded-2xl overflow-hidden bg-[#FFF7FB]">
+                    <button
+                        class="faq-header w-full text-left p-5 flex items-center justify-between font-bold text-sm text-[#22181F] hover:text-[#D84C7B] transition-colors">
+                        <span>¿Con cuánta anticipación debo realizar mi pedido?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+                    </button>
+                    <div
+                        class="faq-content hidden px-5 pb-5 text-xs text-[#6E5664] leading-relaxed border-t border-[#F7DDEB] pt-3">
+                        Para productos de catálogo estándar requerimos un mínimo de <strong>24 a 48 horas</strong>
+                        hábiles. Para tortas personalizadas a medida, diseños con flores naturales o mesas dulces de
+                        eventos, sugerimos realizar la reserva con <strong>4 a 7 días</strong> de antelación para
+                        garantizar fecha en agenda.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-[#F3CDE0] rounded-2xl overflow-hidden bg-[#FFF7FB]">
+                    <button
+                        class="faq-header w-full text-left p-5 flex items-center justify-between font-bold text-sm text-[#22181F] hover:text-[#D84C7B] transition-colors">
+                        <span>¿Cómo funcionan los envíos y cuáles son las zonas de cobertura?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+                    </button>
+                    <div
+                        class="faq-content hidden px-5 pb-5 text-xs text-[#6E5664] leading-relaxed border-t border-[#F7DDEB] pt-3">
+                        Realizamos envíos a toda CABA y Zona Norte mediante vehículos climatizados y personal capacitado
+                        para transportar pastelería delicada. En pedidos superiores a $30.000 el envío es <strong>100%
+                            gratuito</strong>. También podés retirar sin costo por nuestro taller en Palermo.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-[#F3CDE0] rounded-2xl overflow-hidden bg-[#FFF7FB]">
+                    <button
+                        class="faq-header w-full text-left p-5 flex items-center justify-between font-bold text-sm text-[#22181F] hover:text-[#D84C7B] transition-colors">
+                        <span>¿Tienen opciones aptas para personas celíacas o veganas?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+                    </button>
+                    <div
+                        class="faq-content hidden px-5 pb-5 text-xs text-[#6E5664] leading-relaxed border-t border-[#F7DDEB] pt-3">
+                        Sí, contamos con una línea especial libre de gluten y 100% plant-based (como nuestra Tarta
+                        Praliné de Cacao y nuestra Pavlova de Frutos Rojos). Si bien extremamos los cuidados higiénicos,
+                        es importante aclarar que en el taller se manipula harina de trigo, por lo que puede existir
+                        riesgo de trazas en casos de celiaquía severa.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-[#F3CDE0] rounded-2xl overflow-hidden bg-[#FFF7FB]">
+                    <button
+                        class="faq-header w-full text-left p-5 flex items-center justify-between font-bold text-sm text-[#22181F] hover:text-[#D84C7B] transition-colors">
+                        <span>¿Cómo debo conservar mi torta una vez recibida?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+                    </button>
+                    <div
+                        class="faq-content hidden px-5 pb-5 text-xs text-[#6E5664] leading-relaxed border-t border-[#F7DDEB] pt-3">
+                        Todas nuestras tortas con cremas o quesos deben permanecer refrigeradas entre 2°C y 6°C en su
+                        caja protectora. Para degustar su máxima cremosidad y sabor, recomendamos retirarla de la
+                        heladera <strong>15 a 20 minutos antes de servir</strong>.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-[#F3CDE0] rounded-2xl overflow-hidden bg-[#FFF7FB]">
+                    <button
+                        class="faq-header w-full text-left p-5 flex items-center justify-between font-bold text-sm text-[#22181F] hover:text-[#D84C7B] transition-colors">
+                        <span>¿Cuáles son los medios de pago aceptados?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+                    </button>
+                    <div
+                        class="faq-content hidden px-5 pb-5 text-xs text-[#6E5664] leading-relaxed border-t border-[#F7DDEB] pt-3">
+                        Aceptamos transferencias bancarias directas, Mercado Pago, tarjetas de débito/crédito y efectivo
+                        al momento de retirar en el taller con un 10% de descuento adicional.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BANNER NEWSLETTER / CLUB DULCE -->
+    <section class="py-16 bg-[#22181F] text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="text-amber-300 font-script text-2xl">Club Rico e Doce</span>
+            <h2 class="font-serif-title text-3xl sm:text-4xl font-bold mt-1 mb-3">
+                15% OFF en tu primer pedido
+            </h2>
+            <p class="text-xs sm:text-sm text-[#F0DFE8] max-w-xl mx-auto mb-6">
+                Suscribite a nuestro newsletter y recibí el cupón de bienvenida <strong
+                    class="text-amber-300 font-mono">DOCE10</strong>, recetas exclusivas de nuestra chef y promociones
+                antes que nadie.
+            </p>
+            <form
+                onsubmit="event.preventDefault(); showToast('¡Suscripción exitosa!', 'Te enviamos tu cupón por email', 'fa-envelope-open-text', 'success');"
+                class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
+                <input type="email" required placeholder="Tu correo electrónico..."
+                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-xs text-white placeholder-gray-400 focus:outline-none focus:border-amber-300" />
+                <button type="submit"
+                    class="w-full sm:w-auto bg-[#D84C7B] hover:bg-[#B92E5E] text-white text-xs font-semibold px-6 py-3 rounded-xl transition-all shadow-md flex-shrink-0">
+                    Suscribirme
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER & CONTACTO -->
+    <footer id="contacto" class="bg-[#1B1218] text-[#BDB0B8] pt-16 pb-12 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+
+                <!-- Columna 1: Marca -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/logo.jpg" alt="Rico e Doce Bakery Logo"
+                            class="w-12 h-12 rounded-full object-cover border-2 border-[#D84C7B]/60 shadow-md">
+                        <div>
+                            <span class="font-serif-title font-bold text-lg text-white block">Rico e Doce</span>
+                            <span class="font-script text-xs text-pink-300">Bakery & Pastelería</span>
+                        </div>
+                    </div>
+                    <p class="leading-relaxed text-[#BDB0B8]">
+                        Creaciones artesanales hechas con amor, flores y dedicación. Endulzando momentos inolvidables en Buenos
+                        Aires.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-white/5 hover:bg-[#D84C7B] text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-white/5 hover:bg-[#D84C7B] text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/5491123456789" target="_blank"
+                            class="w-8 h-8 rounded-full bg-white/5 hover:bg-emerald-600 text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Navegación Rápida -->
+                <div>
+                    <h4 class="font-serif-title font-bold text-sm text-white mb-4">Navegación</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#catalogo" class="hover:text-white transition-colors">Catálogo de Tortas</a></li>
+                        <li><a href="#personalizador" class="hover:text-white transition-colors">Personalizador a
+                                Medida</a></li>
+                        <li><a href="#taller" class="hover:text-white transition-colors">Nuestro Taller</a></li>
+                        <li><a href="#testimonios" class="hover:text-white transition-colors">Reseñas de Clientes</a>
+                        </li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Horarios y Retiro -->
+                <div>
+                    <h4 class="font-serif-title font-bold text-sm text-white mb-4">Horarios de Atención</h4>
+                    <ul class="space-y-2.5">
+                        <li class="flex justify-between">
+                            <span>Martes a Viernes:</span>
+                            <span class="text-white font-medium">09:00 - 19:30</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sábados:</span>
+                            <span class="text-white font-medium">09:00 - 20:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Domingos:</span>
+                            <span class="text-white font-medium">10:00 - 14:00</span>
+                        </li>
+                        <li class="flex justify-between text-rose-300">
+                            <span>Lunes:</span>
+                            <span>Cerrado por elaboración</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Dónde encontrarnos -->
+                <div>
+                    <h4 class="font-serif-title font-bold text-sm text-white mb-4">Taller & Takeaway</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-[#D84C7B] mt-1"></i>
+                            <span>Av. Coronel Díaz 2140, Palermo Soho, CABA.</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+                            <span>+54 9 11 2345-6789</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-[#D84C7B]"></i>
+                            <span>pedidos@ricoedocebakery.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div
+                class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-[11px] text-[#8E7B87]">
+                <div>
+                    © 2026 Rico e Doce Bakery. Todos los derechos reservados.
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hover:text-white">Términos y Condiciones</a>
+                    <span>•</span>
+                    <a href="#" class="hover:text-white">Políticas de Envío y Devolución</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- DRAWER LATERAL DE CARRITO DE COMPRAS -->
+    <!-- ===================================================================== -->
+    <div id="cart-backdrop" class="fixed inset-0 bg-black/50 z-50 hidden opacity-0 transition-opacity"></div>
+    <div id="cart-drawer"
+        class="fixed inset-y-0 right-0 max-w-md w-full bg-[#FFF7FB] z-50 shadow-2xl flex flex-col translate-x-full transition-transform duration-300">
+
+        <!-- Header del Carrito -->
+        <div class="p-5 border-b border-[#F3CDE0] flex items-center justify-between bg-white">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-bag-shopping text-[#D84C7B] text-lg"></i>
+                <h3 class="font-serif-title font-bold text-lg text-[#22181F]">Mi Pedido</h3>
+                <span
+                    class="cart-count-badge bg-[#FFEDF6] text-[#D84C7B] text-xs font-bold px-2 py-0.5 rounded-full border border-[#F7B7DC]">0</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <button onclick="clearCart()" class="text-xs text-[#A08F87] hover:text-red-500 transition-colors p-1"
+                    title="Vaciar carrito">
+                    <i class="fa-solid fa-trash-can mr-1"></i> Vaciar
+                </button>
+                <button id="close-cart-btn"
+                    class="w-8 h-8 rounded-full bg-[#FFF0F6] hover:bg-[#F3CDE0] text-[#22181F] flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Barra de Progreso Envío Gratis -->
+        <div class="px-5 py-3 bg-[#FFEDF6] border-b border-[#F3CDE0]">
+            <div id="free-shipping-text" class="text-xs text-[#6E5664] mb-1.5 text-center">
+                Te faltan $ 30.000 para envío gratis
+            </div>
+            <div class="w-full bg-[#ECC0D6] h-1.5 rounded-full overflow-hidden">
+                <div id="free-shipping-progress" class="bg-[#D84C7B] h-full rounded-full transition-all duration-500"
+                    style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Lista de Productos en Carrito -->
+        <div id="cart-items-container" class="flex-1 overflow-y-auto p-5 space-y-3">
+            <!-- Renderizado dinámico -->
+        </div>
+
+        <!-- Estado vacío del carrito -->
+        <div id="cart-empty-state" class="hidden flex-1 flex flex-col items-center justify-center p-8 text-center">
+            <div
+                class="w-20 h-20 rounded-full bg-[#FFEDF6] text-[#D84C7B] flex items-center justify-center text-3xl mb-4">
+                <i class="fa-solid fa-cake-candles"></i>
+            </div>
+            <h4 class="font-serif-title font-bold text-lg text-[#22181F]">Tu carrito está vacío</h4>
+            <p class="text-xs text-[#825E73] max-w-xs mt-1 mb-6">Aún no agregaste ninguna torta o tarta a tu pedido.</p>
+            <button onclick="closeCartDrawer(); window.location.href='#catalogo';"
+                class="bg-[#D84C7B] text-white text-xs font-semibold px-6 py-3 rounded-xl shadow-md">
+                Ver Catálogo de Productos
+            </button>
+        </div>
+
+        <!-- Footer / Checkout del Carrito -->
+        <div id="cart-footer" class="p-5 border-t border-[#F3CDE0] bg-white space-y-4">
+
+            <!-- Selector Método de Entrega -->
+            <div>
+                <label class="block text-xs font-bold text-[#22181F] mb-1.5">Método de entrega:</label>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <label
+                        class="flex items-center gap-2 p-2.5 rounded-xl border border-[#ECC0D6] cursor-pointer hover:bg-[#FFF0F6] transition-colors has-[:checked]:border-[#D84C7B] has-[:checked]:bg-[#FFEDF6]">
+                        <input type="radio" name="delivery_method" id="delivery-pickup" value="pickup" checked
+                            class="accent-[#D84C7B]">
+                        <span class="font-medium text-[#22181F]">Retiro en Taller (Gratis)</span>
+                    </label>
+                    <label
+                        class="flex items-center gap-2 p-2.5 rounded-xl border border-[#ECC0D6] cursor-pointer hover:bg-[#FFF0F6] transition-colors has-[:checked]:border-[#D84C7B] has-[:checked]:bg-[#FFEDF6]">
+                        <input type="radio" name="delivery_method" id="delivery-shipping" value="delivery"
+                            class="accent-[#D84C7B]">
+                        <span class="font-medium text-[#22181F]">Envío a Domicilio</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Cupón de Descuento -->
+            <div>
+                <div class="flex gap-2">
+                    <input type="text" id="coupon-code-input" placeholder="Cupón (ej: DOCE10)"
+                        class="w-full bg-[#FFF0F6] border border-[#ECC0D6] rounded-xl px-3 py-2 text-xs uppercase text-[#22181F] focus:outline-none focus:border-[#D84C7B]" />
+                    <button id="apply-coupon-btn"
+                        class="bg-[#22181F] hover:bg-black text-white text-xs font-semibold px-4 py-2 rounded-xl flex-shrink-0 transition-colors">
+                        Aplicar
+                    </button>
+                </div>
+                <span id="coupon-feedback" class="text-xs mt-1 block"></span>
+            </div>
+
+            <!-- Resumen de Costos -->
+            <div class="space-y-1.5 text-xs pt-2 border-t border-gray-100">
+                <div class="flex justify-between text-[#6E5664]">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal" class="font-semibold text-[#22181F]">$ 0</span>
+                </div>
+                <div id="cart-discount-row" class="hidden flex justify-between text-emerald-600 font-medium">
+                    <span>Descuento aplicado</span>
+                    <span id="cart-discount">-$ 0</span>
+                </div>
+                <div class="flex justify-between text-[#6E5664]">
+                    <span>Envío</span>
+                    <span id="cart-shipping" class="font-medium">Gratis (Retiro)</span>
+                </div>
+                <div
+                    class="flex justify-between text-base font-bold text-[#22181F] pt-2 border-t border-dashed border-gray-200">
+                    <span>Total a abonar</span>
+                    <span id="cart-total" class="font-serif-title text-[#D84C7B] text-xl font-bold">$ 0</span>
+                </div>
+            </div>
+
+            <!-- Botón Finalizar por WhatsApp -->
+            <button id="whatsapp-checkout-btn"
+                class="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-semibold text-sm py-3.5 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 group">
+                <i class="fa-brands fa-whatsapp text-lg group-hover:scale-110 transition-transform"></i>
+                <span>Confirmar Pedido por WhatsApp</span>
+            </button>
+
+            <p class="text-[10px] text-center text-[#A68C9B]">
+                Al confirmar, se abrirá WhatsApp con el detalle estructurado para el maestro pastelero.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- MODAL VISTA RÁPIDA (QUICK VIEW) -->
+    <!-- ===================================================================== -->
+    <div id="quick-view-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+        <div
+            class="modal-content bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative max-h-[90vh] flex flex-col md:flex-row">
+
+            <button id="qv-close"
+                class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+
+            <!-- Imagen Izquierda -->
+            <div class="md:w-1/2 aspect-square md:aspect-auto relative bg-[#FFF0F6]">
+                <img id="qv-image" src="" alt="" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Información Derecha -->
+            <div class="md:w-1/2 p-6 flex flex-col justify-between overflow-y-auto">
+                <div>
+                    <span id="qv-category"
+                        class="text-[11px] font-bold text-[#D84C7B] uppercase tracking-wider block mb-1">Categoría</span>
+                    <h3 id="qv-name" class="font-serif-title text-2xl font-bold text-[#22181F] leading-tight mb-2">
+                        Nombre del Producto</h3>
+
+                    <div class="flex items-center gap-3 mb-4">
+                        <span id="qv-price" class="font-serif-title text-2xl font-bold text-[#D84C7B]">$ 0</span>
+                        <span class="text-xs bg-[#FFEDF6] text-[#825E73] px-2.5 py-1 rounded-full font-medium">
+                            <i class="fa-solid fa-user-group text-[10px] mr-1"></i> <span id="qv-portions">12
+                                porciones</span>
+                        </span>
+                    </div>
+
+                    <p id="qv-description" class="text-xs text-[#6E5664] leading-relaxed mb-4">
+                        Descripción completa del producto...
+                    </p>
+
+                    <!-- Ingredientes -->
+                    <div class="mb-4">
+                        <h5 class="text-xs font-bold text-[#22181F] uppercase tracking-wider mb-2">Ingredientes Nobles:
+                        </h5>
+                        <div id="qv-ingredients" class="flex flex-wrap gap-1.5"></div>
+                    </div>
+
+                    <!-- Alérgenos -->
+                    <div class="mb-4">
+                        <h5 class="text-xs font-bold text-[#22181F] uppercase tracking-wider mb-2">Alérgenos & Cuidados:
+                        </h5>
+                        <div id="qv-allergens" class="flex flex-wrap gap-1.5"></div>
+                    </div>
+
+                    <!-- Conservación -->
+                    <div class="bg-[#FFF0F6] p-3 rounded-xl text-[11px] text-[#6E5664] mb-6">
+                        <strong class="text-[#22181F]">Conservación:</strong> <span id="qv-storage">-</span>
+                    </div>
+                </div>
+
+                <!-- Selector de Cantidad y Agregar -->
+                <div class="pt-4 border-t border-[#F3CDE0] flex items-center gap-3">
+                    <div class="flex items-center border border-[#ECC0D6] rounded-xl bg-[#FFF0F6] p-1">
+                        <button id="qv-qty-minus"
+                            class="w-8 h-8 rounded-lg hover:bg-white text-xs font-bold text-[#22181F] transition-colors">-</button>
+                        <span id="qv-qty" class="w-8 text-center text-xs font-bold text-[#22181F]">1</span>
+                        <button id="qv-qty-plus"
+                            class="w-8 h-8 rounded-lg hover:bg-white text-xs font-bold text-[#22181F] transition-colors">+</button>
+                    </div>
+
+                    <button id="qv-add-to-cart"
+                        class="flex-1 bg-[#D84C7B] hover:bg-[#B92E5E] active:scale-95 text-white font-semibold text-xs py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>Agregar al Carrito</span>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/5491123456789?text=Hola%20Rico%20e%20Doce%20Bakery!%20Quisiera%20hacer%20una%20consulta"
+        target="_blank"
+        class="fixed bottom-6 left-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all group"
+        title="Chat de WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span
+            class="absolute left-16 bg-[#22181F] text-white text-xs px-3 py-1.5 rounded-xl shadow-lg whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity">
+            ¿Dudas? Chateá con nosotros
+        </span>
+    </a>
+
+    <!-- CONTENEDOR DE TOAST NOTIFICATIONS -->
+    <div id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
